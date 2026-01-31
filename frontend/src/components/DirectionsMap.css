@@ -1,0 +1,12 @@
+.directions-map {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .map-image {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  
