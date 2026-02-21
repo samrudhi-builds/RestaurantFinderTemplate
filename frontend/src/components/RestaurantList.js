@@ -1,25 +1,15 @@
 import React from 'react';
+import RestaurantCard from './RestaurantCard';
+import './RestaurantList.css';
 
-const RestaurantList = () => {
-    // Dummy data for restaurants
-    const restaurants = [
-        { id: 1, name: "Pizza Place", location: "123 Main St" },
-        { id: 2, name: "Sushi Spot", location: "456 Elm St" },
-        { id: 3, name: "Burger Joint", location: "789 Oak St" },
-    ];
-
-    return (
-        <div>
-            <h2>Nearby Restaurants</h2>
-            <ul>
-                {restaurants.map((restaurant) => (
-                    <li key={restaurant.id}>
-                        {restaurant.name} - {restaurant.location}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-};
+function RestaurantList({ restaurants }) {
+  return (
+    <div className="restaurant-list">
+      {restaurants.map((restaurant) => (
+        <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+      ))}
+    </div>
+  );
+}
 
 export default RestaurantList;

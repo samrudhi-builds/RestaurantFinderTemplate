@@ -1,14 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './RestaurantCard.css';
 
-const RestaurantCard = ({ name, imgSrc, directions }) => {
+function RestaurantCard({ restaurant }) {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <div className="restaurant-card">
-      <img src={imgSrc} alt={name} className="restaurant-img" />
-      <h4 className="restaurant-name">{name}</h4>
-      <a href={directions} className="restaurant-directions">Show directions</a>
+      <img 
+        src={restaurant.image} 
+        alt={restaurant.name}
+        className="restaurant-image"
+      />
+      <div className="restaurant-info">
+        <div className="restaurant-header">
+          <h3>{restaurant.name}</h3>
+          <span className="price">{restaurant.price}</span>
+        </div>
+        
+        <div className="restaurant-meta">
+          <span className="cuisine">{restaurant.cuisine}</span>
+          <span className="rating">★ {restaurant.rating}</span>
+          <span className="distance">{restaurant.distance} mi</span>
+        </div>
+        
+        <p className="address">{restaurant.address}</p>
+        
+        <button 
+          className="menu-button"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          {showMenu ? 'Hide Menu Highlights' : 'Show Menu Highlights'}
+        </button>
+        
+        {showMenu && (
+          <div className="menu-highlights">
+            <h4>Menu Highlights:</h4>
+            <ul>
+              {restaurant.menuHighlights.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
-};
+}
 
 export default RestaurantCard;

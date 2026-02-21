@@ -1,59 +1,75 @@
-/* Style for the entire app */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f8f8;
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.landing-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
-  overflow-y: auto;
-  height: 100vh; /* Full viewport height */
 }
 
-.content-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: scroll;
-}
-
-@media (min-width: 600px) {
-  .landing-page {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-
-/* Styling the cards and layout for better spacing */
-.favorites-section {
-  width: 100%;
-  max-width: 400px;
-  background-color: white;
+.search-section {
+  background: white;
+  padding: 30px;
   border-radius: 15px;
-  margin-bottom: 20px;
-  padding: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
 }
 
-.favorite-card {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
+.search-section h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-align: center;
 }
 
-.favorite-card img {
-  width: 60px;
-  height: 60px;
+.search-button {
+  width: 100%;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
   border-radius: 8px;
-  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 20px;
 }
 
-.recommended-card {
-  margin-top: 20px;
+.search-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.search-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.results-section {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.results-section h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.no-results {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.no-results p {
+  color: #666;
+  font-size: 18px;
 }

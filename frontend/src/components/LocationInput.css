@@ -1,0 +1,62 @@
+.location-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.location-field {
+  flex: 1;
+  min-width: 250px;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.location-field:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.location-field::placeholder {
+  color: #999;
+}
+
+.location-button {
+  padding: 15px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.location-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.location-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .location-input {
+    flex-direction: column;
+  }
+  
+  .location-field {
+    min-width: 100%;
+  }
+  
+  .location-button {
+    width: 100%;
+  }
+}
