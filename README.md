@@ -1,23 +1,27 @@
-# Restaurant Finder with Location-Based Menu Recommendations
+# Restaurant Finder - React Frontend Template
 
-A modern React application that helps users discover nearby restaurants with location-based menu recommendations.
+A complete, production-ready React template for building restaurant finder applications. Features a modern UI with location-based search, restaurant cards, and menu highlights.
+
+## Overview
+
+This is a fully-functional frontend template with custom brutalist design, responsive layout, and clean component architecture. Use it as-is for prototypes or extend it with your own backend API for production applications.
 
 ## Features
 
-- Search by Location: Enter your address or use your current location
-- Restaurant Discovery: Find restaurants based on your location
-- Distance Tracking: See how far each restaurant is from you
-- Ratings & Reviews: View restaurant ratings at a glance
-- Menu Highlights: Discover popular menu items at each location
-- Price Ranges: Filter by budget-friendly options
-- Smart Search: Search by restaurant name, cuisine type, or menu items
+- **Location Search** - Manual entry or browser geolocation
+- **Smart Filtering** - Search by name, cuisine type, or menu items
+- **Restaurant Cards** - Rating, distance, price range, and address display
+- **Menu Highlights** - Expandable popular items section
+- **Responsive Design** - Mobile and desktop optimized
+- **Custom Styling** - Brutalist aesthetic with serif fonts and hard shadows
+- **Component Architecture** - Clean, reusable React components
 
 ## Technologies Used
 
 - **React 18** - Modern React with hooks
 - **React Router** - For navigation
-- **React Icons** - Beautiful icons
-- **CSS3** - Custom styling with gradients and animations
+- **React Icons** - Icon library
+- **CSS3** - Custom brutalist styling with hard shadows
 
 ## Quick Start Guide
 
@@ -70,20 +74,31 @@ frontend/
 └── package.json
 ```
 
-## How to Use
+## Usage
 
-1. **Enter Your Location**: Type in your address, city, or zip code, or click "Use Current Location" to automatically detect your position.
+The template includes mock restaurant data for demonstration. To connect your own data source, modify the `handleSearch` function in `frontend/src/App.js`:
 
-2. **Search (Optional)**: Use the search bar to filter by restaurant name, cuisine type, or specific menu items.
+```javascript
+// Replace mock data with your API call
+const response = await fetch(`YOUR_API_URL?location=${location}&query=${searchQuery}`);
+const data = await response.json();
+setRestaurants(data);
+```
 
-3. **Browse Results**: View a list of nearby restaurants with ratings, distance, and price range.
+## Extension Options
 
-4. **View Menu Highlights**: Click "Show Menu Highlights" on any restaurant card to see popular menu items.
+This template is designed to work with any backend. Common integrations:
+
+- Google Places API
+- Yelp Fusion API
+- Custom REST or GraphQL API
+- Firebase/Supabase
+- Node.js + MongoDB/PostgreSQL
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Feel free to use this template for your own projects! Contributions and improvements are welcome.
 
 ## License
 
-This project is open source and available under the MIT License.
+MIT License - see [LICENSE](LICENSE) file for details.

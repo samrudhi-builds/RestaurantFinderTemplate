@@ -12,7 +12,6 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [userLocation, setUserLocation] = useState(null);
 
-  // Get user's current location
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -37,8 +36,6 @@ function App() {
 
     setLoading(true);
     
-    // Mock restaurant data for demonstration
-    // In a real app, this would call your backend API
     const mockRestaurants = [
       {
         id: 1,
@@ -97,7 +94,6 @@ function App() {
       }
     ];
 
-    // Filter by search query if provided
     let filteredRestaurants = mockRestaurants;
     if (searchQuery) {
       filteredRestaurants = mockRestaurants.filter(
@@ -110,7 +106,6 @@ function App() {
       );
     }
 
-    // Sort by distance
     filteredRestaurants.sort((a, b) => a.distance - b.distance);
 
     setTimeout(() => {
