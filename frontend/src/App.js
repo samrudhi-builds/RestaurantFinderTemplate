@@ -124,7 +124,7 @@ function App() {
       <Header />
       <div className="container">
         <div className="search-section">
-          <h2>Find Restaurants Near You</h2>
+          <h2>Where are you eating?</h2>
           <LocationInput 
             location={location} 
             setLocation={setLocation}
@@ -139,20 +139,20 @@ function App() {
             onClick={handleSearch}
             disabled={loading}
           >
-            {loading ? 'Searching...' : 'Search Restaurants'}
+            {loading ? 'Looking...' : 'Find Restaurants'}
           </button>
         </div>
         
         {restaurants.length > 0 && (
           <div className="results-section">
-            <h3>Found {restaurants.length} restaurant{restaurants.length !== 1 ? 's' : ''}</h3>
+            <h3>We found {restaurants.length} place{restaurants.length !== 1 ? 's' : ''}</h3>
             <RestaurantList restaurants={restaurants} />
           </div>
         )}
         
         {restaurants.length === 0 && !loading && location && (
           <div className="no-results">
-            <p>No restaurants found. Try a different search!</p>
+            <p>Nothing here. Try searching somewhere else?</p>
           </div>
         )}
       </div>

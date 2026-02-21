@@ -29,12 +29,12 @@ function RestaurantCard({ restaurant }) {
           className="menu-button"
           onClick={() => setShowMenu(!showMenu)}
         >
-          {showMenu ? 'Hide Menu Highlights' : 'Show Menu Highlights'}
+          {showMenu ? 'Hide menu' : 'See what\'s good here'}
         </button>
         
         {showMenu && (
           <div className="menu-highlights">
-            <h4>Menu Highlights:</h4>
+            <h4>Popular items:</h4>
             <ul>
               {restaurant.menuHighlights.map((item, index) => (
                 <li key={index}>{item}</li>

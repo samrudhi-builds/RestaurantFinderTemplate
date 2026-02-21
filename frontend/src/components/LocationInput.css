@@ -1,50 +1,58 @@
 .location-input {
   display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+  gap: 12px;
+  margin-bottom: 18px;
   flex-wrap: wrap;
 }
 
 .location-field {
   flex: 1;
   min-width: 250px;
-  padding: 15px 20px;
+  padding: 13px 16px;
   font-size: 16px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  border: 2px solid #2c2416;
+  border-radius: 2px;
   outline: none;
-  transition: border-color 0.3s;
+  transition: all 0.15s;
+  font-family: 'Georgia', serif;
+  background: #fff;
 }
 
 .location-field:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #d97706;
+  box-shadow: 2px 2px 0 #2c2416;
+  transform: translate(-1px, -1px);
 }
 
 .location-field::placeholder {
   color: #999;
+  font-style: italic;
 }
 
 .location-button {
-  padding: 15px 25px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 13px 22px;
+  background-color: #854d0e;
+  color: #fff;
+  border: 2px solid #2c2416;
+  border-radius: 2px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: all 0.15s;
   white-space: nowrap;
+  font-family: 'Georgia', serif;
+  box-shadow: 3px 3px 0 #2c2416;
 }
 
 .location-button:hover {
-  background-color: #45a049;
-  transform: translateY(-2px);
+  background-color: #713f12;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #2c2416;
 }
 
 .location-button:active {
-  transform: translateY(0);
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 #2c2416;
 }
 
 @media (max-width: 768px) {

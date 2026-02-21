@@ -1,12 +1,13 @@
 .restaurant-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 22px;
+  margin-top: 22px;
 }
 
 @media (max-width: 768px) {
   .restaurant-list {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 }

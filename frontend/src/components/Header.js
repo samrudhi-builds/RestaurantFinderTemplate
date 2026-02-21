@@ -6,7 +6,7 @@ function Header() {
     <header className="header">
       <div className="header-content">
         <h1>Restaurant Finder</h1>
-        <p>Discover amazing restaurants with location-based menu recommendations</p>
+        <p>Find good food near you</p>
       </div>
     </header>
   );

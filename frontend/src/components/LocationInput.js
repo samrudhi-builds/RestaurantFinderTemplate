@@ -14,7 +14,7 @@ function LocationInput({ location, setLocation, userLocation }) {
     <div className="location-input">
       <input
         type="text"
-        placeholder="Enter your location (city, address, or zip code)"
+        placeholder="City, address, or zip code"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
         className="location-field"
@@ -24,7 +24,7 @@ function LocationInput({ location, setLocation, userLocation }) {
         className="location-button"
         type="button"
       >
-        Use Current Location
+        Use My Location
       </button>
     </div>
   );

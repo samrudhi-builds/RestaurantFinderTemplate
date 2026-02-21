@@ -1,75 +1,87 @@
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #f8f5f0;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 25px 18px;
 }
 
 .search-section {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
+  background: #fff;
+  padding: 35px 28px;
+  border: 2px solid #2c2416;
+  border-radius: 3px;
+  box-shadow: 5px 5px 0 #2c2416;
+  margin-bottom: 32px;
 }
 
 .search-section h2 {
-  color: #333;
-  margin-bottom: 25px;
-  font-size: 28px;
-  text-align: center;
+  color: #2c2416;
+  margin-bottom: 28px;
+  font-size: 26px;
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .search-button {
   width: 100%;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
+  padding: 14px 28px;
+  background: #d97706;
+  color: #fff;
+  border: 2px solid #2c2416;
+  border-radius: 2px;
+  font-size: 17px;
+  font-weight: 700;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  margin-top: 20px;
+  transition: all 0.15s ease;
+  margin-top: 22px;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.3px;
+  box-shadow: 3px 3px 0 #2c2416;
 }
 
 .search-button:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #2c2416;
+  background: #b45309;
 }
 
 .search-button:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
 .results-section {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 32px 28px;
+  border: 2px solid #2c2416;
+  border-radius: 3px;
+  box-shadow: 5px 5px 0 #2c2416;
 }
 
 .results-section h3 {
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 22px;
+  color: #2c2416;
+  margin-bottom: 24px;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
 }
 
 .no-results {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 38px;
+  border: 2px solid #2c2416;
+  border-radius: 3px;
+  box-shadow: 5px 5px 0 #2c2416;
   text-align: center;
 }
 
 .no-results p {
-  color: #666;
-  font-size: 18px;
+  color: #525252;
+  font-size: 17px;
+  font-style: italic;
 }

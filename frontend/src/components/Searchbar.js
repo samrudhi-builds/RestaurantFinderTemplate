@@ -6,7 +6,7 @@ function SearchBar({ searchQuery, setSearchQuery }) {
     <div className="search-bar">
       <input
         type="text"
-        placeholder="Search by restaurant name, cuisine, or menu item..."
+        placeholder="What kind of food? (optional)"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         className="search-input"
